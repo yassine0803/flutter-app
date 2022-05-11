@@ -358,6 +358,9 @@ class _UsersWidgetState extends State<UsersWidget> {
                         ),
                       ),
                       onPressed: () {
+                        setState(() {
+                          _edit = false;
+                        });
                         Provider.of<UserProvider>(context, listen: false)
                             .deleteUser(widget.index);
                       },

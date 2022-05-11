@@ -17,7 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     super.initState();
 
-    Future.delayed(Duration(milliseconds: 3000), () {
+    Future.delayed(Duration(milliseconds: 5000), () {
       WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
         Provider.of<UserProvider>(context, listen: false).getUsers();
       });
